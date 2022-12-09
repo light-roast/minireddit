@@ -1,11 +1,20 @@
 import React from 'react';
 import './App.css';
+import Home from './features/Home/Home';
+import Header from './features/Header/Header';
+import Subreddits from './features/Subreddits/Subreddits';
 
 function App() {
   return (
-    <div className="App">
-      <header><h1>Mini Reddit Viewer</h1></header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Home />
+      </main>
+      <aside>
+        <Subreddits />
+      </aside>
+    </>
   );
 }
 

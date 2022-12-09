@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getSubreddits } from '../../api/reddit';
 
-const subRedditsSlice = createSlice({
+const subRedditSlice = createSlice({
     name: 'subreddits',
     initialState: {
         subreddits: [],
@@ -41,3 +41,5 @@ export const {
       dispatch(getSubredditsFailed());
     }
   };
+
+  export const selectSubreddits = (state) => state.subreddits.subreddits;
