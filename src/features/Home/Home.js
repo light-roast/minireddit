@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Post from '../Post/Post';
 import PostLoading from '../Post/PostLoading';
-import getRandomNumber from '../../utils/getRandomNumber';
 import {
   fetchPosts,
   selectFilteredPosts,
@@ -19,7 +18,7 @@ const Home = () => {
 
   useEffect(() => {
     dispatch(fetchPosts(selectedSubreddit));
-  }, [selectedSubreddit]);
+  }, [selectedSubreddit, dispatch]);
 
   const onToggleComments = (index) => {
     const getComments = (permalink) => {
